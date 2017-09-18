@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">First</string>
+    <string name="title_activity_choose_com">选择快递公司</string>
+    <string name="title_activity_search">查件</string>
+    <string name="title_activity_result">物流详情</string>
+    <string name="title_activity_history">历史记录</string>
+    <string name="title_activity_qrcode">生成二维码</string>
+    <string name="share">分享</string>
+    <string name="about">关于</string>
+    <string name="more">更多</string>
+    <string name="tips">温馨提示</string>
+    <string name="sure">确定</string>
+    <string name="cancel">取消</string>
+    <string name="save">保存</string>
+    <string name="loading">请稍候…</string>
+    <string name="no_history">暂时没有记录</string>
+    <string name="post_id">运单号码</string>
+    <string name="input_post_id">请输入或扫描运单号</string>
+    <string name="uncheck">在途中</string>
+    <string name="ischeck">已签收</string>
+    <string name="click2exit">再按一次退出First</string>
+    <string name="sure_delete_history">您要删除该条记录吗？</string>
+    <string name="qrcode_input">请输入文本</string>
+    <string name="qrcode_save_tips">是否保存二维码？</string>
+    <string name="qrcode_file_name">QRCode_%s.png</string>
+    <string name="qrcode_save_success">二维码已保存至/SDCard/Pictures/%s</string>
+    <string name="qrcode_no_sdcard">保存失败，SD卡不可用</string>
+    <string name="qrcode_save_failure">保存失败</string>
+    <string name="share_content">我正在使用@First，查询并跟踪快递，快递信息及时掌握！</string>
+    <string name="analyze_fail">抱歉，未在图中发现条码！</string>
+    <string name="remark">运单备注</string>
+    <string name="about_project_url">https://github.com/wangchenyan/PonyExpress</string>
+    <string name="about_weibo">http://blog.csdn.net/ljt2724960661</string>
+    <string name="about_jianshu">http://www.jianshu.com/users/3231579893ac</string>
+    <string name="about_github">https://github.com/HotBloodMan</string>
+    <string name="no_permission">没有%1$s权限，无法%2$s！</string>
+
+
+    <string name="register_text1">忘记密码</string>
+    <string name="register_text2">立即注册 ></string>
+    <string name="login">登录</string>
+    <string name="login_password_hint">请输入密码</string>
+    <string name="login_username_hint">请输入用户名</string>
+    <string name="network_tip">当前网络不可用，请检查网络配置</string>
+    <string name="register_account">帐号</string>
+
+    <string name="register_account_hint">请输入用户名</string>
+    <string name="register_password">密码</string>
+    <string name="register_password_hint">请输入密码</string>
+    <string name="register_password_confirm_hint">请再次输入密码</string>
+    <string name="register_confirm_password">确定密码</string>
+    <string name="register">注册</string>
+    <string name="account_null">帐号不能为空，请重新输入</string>
+    <string name="password_null">密码不能为空，请重新输入</string>
+    <string name="register_password_error">两次输入的密码不一致，请重新输过</string>
+
+
+    <string name="item_01">关于</string>
+    <string name="item_02">设置</string>
+
+    <!--Banner中R.id.tag-->
+    <item name="tag" type="id"/>
+</resources>
