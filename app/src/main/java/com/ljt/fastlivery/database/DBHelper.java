@@ -9,6 +9,9 @@ import com.j256.ormlite.table.TableUtils;
 
 import java.sql.SQLException;
 
+/*
+* 数据库帮助类
+* */
 public class DBHelper extends OrmLiteSqliteOpenHelper {
     private static final String DATABASE_NAME = "express";
     private static final int DATABASE_VERSION = 2;

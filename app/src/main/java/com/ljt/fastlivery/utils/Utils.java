@@ -4,11 +4,14 @@
 package com.ljt.fastlivery.utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
 
 import java.io.File;
+
+import static android.icu.lang.UCharacter.GraphemeClusterBreak.T;
 
 /**
  * @author ljt
@@ -48,6 +51,14 @@ public class Utils {
         final float fontScale = context.getResources().getDisplayMetrics().scaledDensity;
         return (int) (spValue * fontScale + 0.5f);
     }
+
+
+    public static   Intent startActivity(Context context,Class c){
+        Intent intent =new Intent();
+        intent.setClass(context,c);
+       return intent;
+    }
+
 
     /**
      * /sdcard/Pictures/

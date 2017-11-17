@@ -336,6 +336,9 @@ public class CaptureActivity extends AppCompatActivity implements Callback, OnCl
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
+                            /*
+                             粘贴复制服务
+                            * */
                             ClipboardManager cmb = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
                             cmb.setText(result);
                             SnackbarUtils.show(CaptureActivity.this, "复制成功");

@@ -2,6 +2,9 @@ package com.ljt.fastlivery.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.MessageQueue;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
@@ -43,6 +46,10 @@ public class CompanyActivity extends BaseActivity implements OnItemClickListener
 
         readCompany();
         lvCompany.setAdapter(new CompanyAdapter(mCompanyList));
+
+//        Handler
+//        Looper
+
     }
 
     @Override

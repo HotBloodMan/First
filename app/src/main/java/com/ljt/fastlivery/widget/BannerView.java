@@ -147,7 +147,7 @@ public class BannerView extends FrameLayout implements ViewPager.OnPageChangeLis
         View view=LayoutInflater.from(getContext()).inflate(R.layout.banner,this,true);
         vP = (ViewPager) view.findViewById(R.id.easy_banner_pager);
         mRG = (RadioGroup) view.findViewById(R.id.easy_banner_radio_bar);
-        vP.removeAllViews();;
+        vP.removeAllViews();
         mRG.removeAllViews();
         initImageViews();
     }

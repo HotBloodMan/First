@@ -64,12 +64,14 @@
         android:layout_height="100dp"></com.ljt.fastlivery.widget.BannerView>
 
     <LinearLayout
+        android:id="@+id/ll_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?android:attr/windowBackground"
         android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/ll_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -121,6 +123,7 @@
             android:layout_height="@dimen/divider_height" />
 
         <FrameLayout
+            android:id="@+id/fl_express"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

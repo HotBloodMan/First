@@ -15,7 +15,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.animation.Animation;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.LinearLayout;
@@ -26,6 +25,7 @@ import com.google.zxing.activity.CaptureActivity;
 import com.ljt.fastlivery.R;
 import com.ljt.fastlivery.adapter.HistoryAdapter;
 import com.ljt.fastlivery.database.History;
+import com.ljt.newsmvp.widget.NewsListFragment;
 import com.ljt.fastlivery.model.SearchInfo;
 import com.ljt.fastlivery.utils.DataManager;
 import com.ljt.fastlivery.utils.SnackbarUtils;
@@ -60,6 +60,12 @@ public class ExpressActivity extends PermissionActivity implements OnClickListen
     @Bind(R.id.banner)
     private BannerView bv;
 
+    @Bind(R.id.ll_content)
+    private LinearLayout llContent;
+
+    @Bind(R.id.ll_text)
+    private LinearLayout llText;
+
     @Bind(R.id.fab_app)
     private FloatingActionButton floatingActionButton;
     View headerLayout;
@@ -73,6 +79,7 @@ public class ExpressActivity extends PermissionActivity implements OnClickListen
     private long mExitTime = 0;
     int[] ints = {R.mipmap.k91, R.mipmap.k92, R.mipmap.k93,R.mipmap.k95};
     private RoundImageView riv;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,8 +88,7 @@ public class ExpressActivity extends PermissionActivity implements OnClickListen
         ViewBinder.bind(this);
 
 
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
 //        toolbar.inflateMenu(R.menu.base_toolbar_menu);
         setSupportActionBar(toolbar);
 //        if (getSupportActionBar() != null) {
@@ -248,6 +254,19 @@ public class ExpressActivity extends PermissionActivity implements OnClickListen
                 return true;
             case R.id.action_share:
                 share();
+                return true;
+            case R.id.action_news:
+//                Intent intent1 = Utils.startActivity(this, NewsActivity.class);
+//                startActivity(intent1);
+                //news
+                llContent.removeView(llText);
+                getSupportFragmentManager().beginTransaction().replace(R.id.fl_express,new NewsListFragment()).commit();
+                toolbar.setTitle("News");
+                System.out.println("-------------->>> has add news");
+                return true;
+            case R.id.action_pictures:
+                intent.setClass(this,PictureActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.action_about:
                 intent.setClass(this, AboutActivity.class);
